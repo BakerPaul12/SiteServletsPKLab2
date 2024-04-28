@@ -1,0 +1,200 @@
+body {
+
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#header{
+    display: flex;
+    justify-content: center; /* Centrujemy zawartość w poziomie */
+    align-items: center; /* Centrujemy zawartość w pionie */
+    background-color: bisque;
+    padding: 10px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#footer {
+    background-color: bisque;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+
+    #date, #time{
+        text-align: center;
+    }
+    .button-container{
+        display: none;
+    }
+    #checkboxMenu {
+        display: block;
+    }
+    #checkboxMenu:checked + .button-container{
+        display: block;
+    }
+}
+@media(min-width: 600px){
+    .checkbox-image{
+        display: none;
+    }
+
+}
+.left-panel {
+    flex: 1;
+    background-color: red;
+    padding: 20px;
+}
+
+.right-panel {
+    flex: 10;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+.right-panel article {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.right-panel article header {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.right-panel article + article::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px; /* Grubość linii */
+    margin: 35px auto;
+    background-color: #ccc; /* Kolor linii */
+}
+
+.image-panel {
+    background-color: red;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-panel img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    background-color:bisque; /* Kolor tła dla przycisków */
+    border-radius: 10px; /* Zaokrąglenie obramowania */
+    padding: 10px; /* Dodatkowy padding wokół przycisków */
+    flex: 7;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.button {
+    display: flex; /* Ustawiamy kontener flexbox */
+    justify-content: center; /* Centrujemy zawartość w poziomie */
+    align-items: center; /* Centrujemy zawartość w pionie */
+    width: 150px;
+    height: 5px; /* Wysokość przycisku */
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    background-color: #ccc;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: brown;
+}
+
+
+.button:hover {
+    background-color: #555;
+    color: white;
+}
+.date, .time {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.operation-inputs input {
+    width: 80px;
+}
+
+.custom-table {
+    width: 60%; /* Całkowita szerokość tabeli */
+}
+
+.custom-table th {
+    width: 20px; /* Szerokość kolumn jest automatycznie dostosowywana */
+}
+
+.custom-table th,
+.custom-table td {
+    text-align: center; /* Wyśrodkowanie tekstu w komórkach */
+}
+
+.button-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkbox-image img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.loginpanel {
+    background-color:bisque;
+    border-radius: 10px; /* Zaokrąglenie obramowania */
+    padding: 10px; /* Dodatkowy padding wokół przycisków */
+    margin: auto;
+    margin-top: 10px;
+    width: 169px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#login, #password{
+    display: flex;
+    width: 85%;
+    height: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#logout{
+    width: 100%;
+}
+
+#loginbutton{
+    width: auto;
+}
